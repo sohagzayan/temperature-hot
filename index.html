@@ -19,6 +19,21 @@
         background: url(images/bg-image.jpg) no-repeat;
         background-size: cover;
         height: 100vh;
+        position: relative;
+      }
+      body::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 0.6;
+      }
+      .container {
+        position: relative;
+        z-index: 99;
       }
     </style>
   </head>
@@ -38,9 +53,13 @@
         </div>
       </form>
       <div class="weather-status text-white text-center">
-        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" />
-        <h1 id="city_name">Dhaka</h1>
-        <h3><span id="tem">38.06</span>&deg;C</h3>
+        <img
+          class="icons_image"
+          src="https://openweathermap.org/img/wn/02d@2x.png"
+          alt=""
+        />
+        <h1 id="city_name">City Name</h1>
+        <h3><span id="tem">00.00</span>&deg;C</h3>
         <h1 class="lead">Clouds</h1>
       </div>
     </div>

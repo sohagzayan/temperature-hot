@@ -15,5 +15,12 @@ function displayData(data){
     const lead = document.querySelector('.lead')
     const tem = document.querySelector('#tem')
     const city_name = document.querySelector('#city_name')
+    const icons_image = document.querySelector('.icons_image')
+    tem.innerHTML = data.main.temp
+    city_name.innerHTML = data.name
+    lead.innerHTML = data.weather[0].description
+    console.log(data)
+    icons_image.src = `http://openweathermap.org/img/wn/${ data.weather[0].icon}@2x.png`
 
 }
+
